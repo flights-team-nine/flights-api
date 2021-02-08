@@ -1,5 +1,6 @@
 
-    Copyright 2021 Nolan Ngo, Dishant Mishra, Vincent Cheng, Matthew Harris, Joseph Santanello, Clare Truell
+    Copyright 2021 Nolan Ngo, Dishant Mishra, Vincent Cheng, Matthew Harris, 
+    Joseph Santanello, Clare Truell
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
