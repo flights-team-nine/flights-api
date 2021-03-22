@@ -9,3 +9,4 @@ class User(Base):
     user_id = Column(ForeignKey(User.id), nullable=False, unique=True)
     password = Column(String, nullable=False)
     roles = Column(JSON, nullable=False)
+    username = Column(String, nullable=False, unique=True)
