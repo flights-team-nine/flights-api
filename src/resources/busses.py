@@ -7,3 +7,12 @@ class BusResource(Resource):
 
     def get(self, bus_id: int):
         return {"logged_in": bus_id == self.__id}
+
+    def post(self, bus_id: int):
+        return {"logged_in": bus_id == self.__id}
+
+    def put(self, bus_id: int):
+        return {"logged_in": bus_id == self.__id}
+
+    def delete(self, bus_id: int):
+        return {"logged_in": bus_id == self.__id}
