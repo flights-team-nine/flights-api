@@ -1,12 +1,13 @@
 from sqlalchemy import Column, ForeignKey, String, JSON
-from src.models.base import Base
+from sqlalchemy.orm import relationship
+from src.utilities.database import Base
 
-from src.models.user import User
+from src.models.veterans import Veteran
 
 
 class MedicalSheet(Base):
     __tablename__ = "MEDICAL_SHEETS"
-    user_id = Column(ForeignKey(User.id), nullable=False, unique=True)
+    user = relationship("Veteran", back_populates="medical")
     training = Column(JSON, nullable=True)
     conditions = Column(JSON, nullable=True)
     diet = Column(JSON, nullable=True)
