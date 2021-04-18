@@ -11,4 +11,4 @@ class MedicalSheet(Base):
     training = Column(JSON, nullable=True)
     conditions = Column(JSON, nullable=True)
     diet = Column(JSON, nullable=True)
-    comments = Column(String, nullable=True)
+    comments = Column(String(255), nullable=True)

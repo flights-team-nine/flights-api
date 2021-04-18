@@ -6,6 +6,6 @@ class Auth(Base):
     __tablename__ = "AUTHENTICATION_AUTHORIZATION"
     user_id = Column(Integer, nullable=False,
                      primary_key=True, autoincrement=True)
-    password = Column(String, nullable=False)
+    password = Column(String(255), nullable=False)
     roles = Column(JSON, nullable=False)
     username = Column(String, nullable=False, unique=True)
