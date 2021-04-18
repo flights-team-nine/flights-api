@@ -8,4 +8,4 @@ class Auth(Base):
                      primary_key=True, autoincrement=True)
     password = Column(String(255), nullable=False)
     roles = Column(JSON, nullable=False)
-    username = Column(String, nullable=False, unique=True)
+    username = Column(String(32), nullable=False, unique=True)
