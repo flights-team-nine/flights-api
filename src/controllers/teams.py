@@ -19,15 +19,17 @@ def create_team(db: Session, name: str, color: str, bus_book: int):
     return team
 
 
-def update_team(db: Session, id: int, name=None, color=None, bus_book=None):
+def update_team(db: Session, id: int, name=None, color=None, bus_book=None, leader=None):
     team = db.query(Team).get(id)
     if name != None or color != None or bus_book != None:
-        if name != None:
+        if name != None and team.name != name:
             team.name = name
-        if color != None:
+        if color != None and team.color != color:
             team.color = color
-        if bus_book != None:
+        if bus_book != None and team.bus_books != bus_book:
             team.bus_book = bus_book
+        if leader != None and team.leader != leader:
+            team.leader = leader
         db.commit()
         db.flush()
         db.refresh(team)
