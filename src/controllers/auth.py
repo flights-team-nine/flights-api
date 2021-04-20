@@ -20,8 +20,9 @@ def check_token(token: str):
 
 def init_admin(db: Session):
     user = Auth(
-        username=environ.get("ADMIN_USERNAME"), 
-        password=bcrypt.hashpw(environ.get("ADMIN_PASSWORD").encode("UTF-8"), bcrypt.gensalt()).decode("UTF-8"),
+        username=environ.get("ADMIN_USERNAME"),
+        password=bcrypt.hashpw(environ.get("ADMIN_PASSWORD").encode(
+            "UTF-8"), bcrypt.gensalt()).decode("UTF-8"),
         roles=["admin"]
     )
     db.add(user)

@@ -83,7 +83,7 @@ def update_veteran(db: Session, id: int, fname=None, mi=None, lname=None, guardi
     return veteran
 
 
-def delete_veteran(db: Session, id: int):
+def delete_veteran(db: Session, id: int) -> int:
     veteran = db.query(Veteran).get(id)
     medical = db.query(MedicalSheet).filter(MedicalSheet.user == id).first()
     contact = db.query(ContactSheet).filter(ContactSheet.user == id).first()
